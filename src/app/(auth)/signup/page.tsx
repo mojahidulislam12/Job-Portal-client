@@ -53,16 +53,16 @@ export default function SignUpPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-100 dark:bg-gray-900">
-      <div className="w-full max-w-md rounded-xl bg-white p-4 shadow-lg dark:bg-gray-200">
-        <h1 className="mb-2 text-center text-3xl font-bold dark:text-black">
+      <div className="w-full max-w-md rounded-xl bg-white mt-20 p-4 shadow-lg dark:bg-gray-200">
+        <h1 className="text-center text-3xl font-bold dark:text-black">
           Create Account
         </h1>
 
-        <p className="mb-4 text-center text-gray-500 dark:text-black">
+        <p className="mb-2 text-center text-gray-500 dark:text-black">
           Sign up to continue
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
             <label className="mb-2 block dark:text-black">Name</label>
 
