@@ -4,7 +4,7 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient(`mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASS}@cluster0.ddpfr5o.mongodb.net/?appName=Cluster0`);
+const client = new MongoClient(`mongodb://job-portal:zXEvBAkS9GRWrjcM@ac-cosbbs4-shard-00-00.ddpfr5o.mongodb.net:27017,ac-cosbbs4-shard-00-01.ddpfr5o.mongodb.net:27017,ac-cosbbs4-shard-00-02.ddpfr5o.mongodb.net:27017/?ssl=true&replicaSet=atlas-7cczb7-shard-0&authSource=admin&appName=Cluster0`);
 const db = client.db("Job-portal");
 
 export const auth = betterAuth({

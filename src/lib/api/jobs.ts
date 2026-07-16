@@ -8,11 +8,13 @@ export interface Job {
   companyId: string;
   location: string;
   jobType: string;
+  jobCategory: string;
   salary: string;
   deadline: string;
   description: string;
   requirements: string;
-  status: string;
+  status: "active" | "inactive" | "pending";
+  isRemote: boolean;
 }
 
 export const getCompanyJobs = async (
@@ -20,7 +22,10 @@ export const getCompanyJobs = async (
   status: string = "active"
 ): Promise<Job[]> => {
   const res = await fetch(
-    `${baseUrl}/jobs?companyId=${companyId}&status=${status}`
+    `${baseUrl}/jobs?companyId=${companyId}&status=${status}`,
+    {
+      cache: "no-store",
+    }
   );
 
   if (!res.ok) {
